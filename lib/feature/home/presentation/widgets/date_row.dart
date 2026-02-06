@@ -30,16 +30,34 @@ class DateRow extends StatelessWidget {
             controller: departureController,
             onTap: () async {
               final picked = await showDatePicker(
-                 context: context,
+                context: context,
                 initialDate: DateTime.now(),
                 firstDate: DateTime.now(),
                 lastDate: DateTime.now().add(const Duration(days: 365)),
+                builder: (context, child) {
+                  return Theme(
+                    data: Theme.of(context).copyWith(
+                      colorScheme: ColorScheme.light(
+                        primary: AppColors.primaryColor, // selected date + header
+                        onPrimary: Colors.white,          // text on selected date
+                        onSurface: Colors.black,          // normal date text
+                        outline: AppColors.primaryColor,  // borders
+                      ),
+                      textButtonTheme: TextButtonThemeData(
+                        style: TextButton.styleFrom(
+                          foregroundColor: AppColors.primaryColor, // OK / CANCEL
+                        ),
+                      ),
+                    ),
+                    child: child!,
+                  );
+                },
               );
 
               if (picked != null) {
                 vm.setDepartureDate(picked);
                 departureController.text =
-                    "${picked.day}/${picked.month}/${picked.year}";
+                "${picked.day}/${picked.month}/${picked.year}";
               }
             },
           ),
@@ -47,8 +65,7 @@ class DateRow extends StatelessWidget {
 
         const SizedBox(width: 12),
 
-        // ✅ Return (disabled for One Way)
-        Expanded(
+         Expanded(
           child: Opacity(
             opacity: vm.isRoundTrip ? 1 : 0.4,
             child: CustomTextFieldWidget(

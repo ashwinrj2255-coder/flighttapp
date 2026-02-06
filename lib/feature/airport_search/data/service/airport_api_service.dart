@@ -3,10 +3,11 @@ import 'package:flymate/core/network/dio_client.dart';
 import '../model/get_airport_search_response_model.dart';
 
 class AirportApiService {
-  final Dio _dio = DioClient().dio;
+final Dio dio;
+AirportApiService({required this.dio});
 
   Future<GetAirportSearchResponseModel> searchAirports(String query, {CancelToken? cancelToken}) async {
-    final response = await _dio.get(
+    final response = await dio.get(
       '/locations/query',
       cancelToken: cancelToken,
       queryParameters: {

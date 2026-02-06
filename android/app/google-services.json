@@ -1,0 +1,126 @@
+{
+  "project_info": {
+    "project_number": "428126162031",
+    "project_id": "sereneanonymous-6d1eb",
+    "storage_bucket": "sereneanonymous-6d1eb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:428126162031:android:cd3d10b6dbee4a6e33519a",
+        "android_client_info": {
+          "package_name": "com.example.anonymouschat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "428126162031-9obefopevagmllviu9n73ovineoh10h1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCp86vBJKQ5fcs1FnqdK30w9N1iZU45uAE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "428126162031-9obefopevagmllviu9n73ovineoh10h1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "428126162031-an0n9eqlg4okfa3v7dgrhdal649va83t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.cryptoMarkets"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:428126162031:android:6dc9a324eeda2ba833519a",
+        "android_client_info": {
+          "package_name": "com.example.crypto_markets"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "428126162031-91ftvp33ar5qo3arl7veji0eroqsb7e3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.crypto_markets",
+            "certificate_hash": "b5e9d27fadb77d7dd15654e9e9f2491f8ec20b64"
+          }
+        },
+        {
+          "client_id": "428126162031-9obefopevagmllviu9n73ovineoh10h1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCp86vBJKQ5fcs1FnqdK30w9N1iZU45uAE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "428126162031-9obefopevagmllviu9n73ovineoh10h1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "428126162031-an0n9eqlg4okfa3v7dgrhdal649va83t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.cryptoMarkets"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:428126162031:android:d6c34c4b5f0a96b533519a",
+        "android_client_info": {
+          "package_name": "com.example.flymate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "428126162031-9obefopevagmllviu9n73ovineoh10h1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCp86vBJKQ5fcs1FnqdK30w9N1iZU45uAE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "428126162031-9obefopevagmllviu9n73ovineoh10h1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "428126162031-an0n9eqlg4okfa3v7dgrhdal649va83t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.cryptoMarkets"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

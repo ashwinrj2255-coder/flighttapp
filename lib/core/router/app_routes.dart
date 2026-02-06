@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flymate/feature/auth/presentation/view/sign_in_page.dart';
 import 'package:flymate/feature/flight_search_result/presentation/view/flight_search_result_page.dart';
 import 'package:go_router/go_router.dart';
 
@@ -11,14 +12,9 @@ class AppRoutes {
   static final GoRouter routes = GoRouter(
     initialLocation: '/',
     routes: [
-      GoRoute(
-        path: '/',
-        builder: (_, __) => SplashPage(),
-      ),
-      GoRoute(
-        path: '/home',
-        builder: (_, __) => const HomePage(),
-      ),
+      GoRoute(path: '/', builder: (_, __) => SplashPage()),
+      GoRoute(path: '/auth', builder: (_, __) => SignInPage()),
+      GoRoute(path: '/home', builder: (_, __) => const HomePage()),
       GoRoute(
         path: '/airport-search',
         builder: (_, __) => const AirportSearchPage(),
@@ -31,6 +27,7 @@ class AppRoutes {
         path: '/details-page',
         builder: (_, __) => const FlightDetailsPage(),
       ),
+      GoRoute(path: '/sign-up-page', builder: (_, __) => const SignInPage()),
     ],
   );
 }

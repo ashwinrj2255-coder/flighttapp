@@ -7,6 +7,7 @@ import 'package:flymate/feature/home/presentation/widgets/flight_menu_drawer.dar
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import '../../../../core/constants/app_colors.dart';
+import '../../../../core/widget/custom_bottom_nav_bar_widget.dart';
 import '../../../airport_search/data/model/get_airport_search_response_model.dart';
 import '../../../airport_search/presentation/view/airport_search_page.dart';
 import '../widgets/date_row.dart';
@@ -190,6 +191,7 @@ class _HomePageState extends State<HomePage> {
                                       height: 20,
                                       child: DropdownButtonHideUnderline(
                                         child: DropdownButton<String>(
+                                          dropdownColor: Color(0xffffffff),
                                           value: travelClass,
                                           onChanged: (v) {
                                             if (v != null) {

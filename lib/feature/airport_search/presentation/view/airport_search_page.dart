@@ -18,6 +18,7 @@ class AirportSearchPage extends StatelessWidget {
       (AirportSearchViewModel vm) => vm.locations,
     );
     return Scaffold(
+      backgroundColor: Color(0xfffafbfa),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),

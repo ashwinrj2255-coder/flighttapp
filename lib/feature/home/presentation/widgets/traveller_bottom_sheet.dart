@@ -12,6 +12,7 @@ class TravellerBottomSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<HomeViewModel>(
       builder: (_, vm, __) {
+
         return Padding(
           padding: const EdgeInsets.all(16),
           child: Column(

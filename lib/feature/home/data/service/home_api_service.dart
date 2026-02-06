@@ -1,12 +1,10 @@
-import 'dart:ui';
-
 import 'package:dio/dio.dart';
-import 'package:flymate/core/network/dio_client.dart';
 import 'package:flymate/feature/home/data/model/get_home_search_response_model.dart';
 import 'package:intl/intl.dart';
 
 class HomeService {
-  final Dio _dio = DioClient().dio;
+  final Dio dio;
+  HomeService({required this.dio});
 
   Future<GetHomeSearchResponseModel> searchFlights({
     required String flyFrom,
@@ -40,12 +38,11 @@ class HomeService {
 
     print("SEARCH REQUEST: /v2/search with params: $query");
 
-    final response = await _dio.get('/v2/search', queryParameters: query);
+    final response = await dio.get('/v2/search', queryParameters: query);
     print("SEARCH RESPONSE RECEIVED: ${response.statusCode}");
 
     return GetHomeSearchResponseModel.fromJson(
       response.data as Map<String, dynamic>,
     );
   }
-
 }

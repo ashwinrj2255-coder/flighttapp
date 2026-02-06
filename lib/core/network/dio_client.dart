@@ -1,32 +1,26 @@
 import 'package:dio/dio.dart';
-import 'package:flymate/core/network/auth_interceptor.dart';
-
+import '../../feature/auth/data/local/secure_storage_service.dart';
+import 'auth_interceptor.dart';
 import 'error_interceptor.dart';
 
 class DioClient {
-  static final DioClient _instance = DioClient._internal();
-
-  factory DioClient() => _instance;
-
-  late final Dio _dio;
-
-  Dio get dio => _dio;
-
-  DioClient._internal() {
-    _dio = Dio(
+  // This is the static method your provider calls
+  static Dio build(SecureStorageService storage) {
+    final dio = Dio(
       BaseOptions(
-        baseUrl: 'https://tequila-api.kiwi.com/',
+        baseUrl: 'https://willodean-unjumpable-jule.ngrok-free.dev/app/v1',
         connectTimeout: const Duration(seconds: 20),
         receiveTimeout: const Duration(seconds: 25),
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: {'Content-Type': 'application/json'},
       ),
     );
-    _dio.interceptors.addAll([
-      AuthInterceptor(),
-      LogInterceptor(responseBody: true),
+
+    dio.interceptors.addAll([
+      AuthInterceptor(storage),
+      LogInterceptor(responseBody: true, requestHeader: true),
       ErrorInterceptor(),
     ]);
+
+    return dio;
   }
 }
